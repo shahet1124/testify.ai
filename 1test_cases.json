@@ -1,0 +1,161 @@
+[
+  {
+    "testCase": "Account Creation Success",
+    "steps": [
+      "Go to \"Page 1 Sign Up\"",
+      "Fill in valid name, email, and password",
+      "Click on \"Create an account\" button"
+    ],
+    "expectedResult": "Should see a confirmation message, receive a verification email, and be redirected to the login/home page"
+  },
+  {
+    "testCase": "Account Creation Failure - Invalid Email Format",
+    "steps": [
+      "Go to \"Page 1 Sign Up\"",
+      "Fill in valid name, invalid email format (e.g., missing '@' symbol), and password",
+      "Click on \"Create an account\" button"
+    ],
+    "expectedResult": "Should see an error message indicating invalid email format"
+  },
+  {
+    "testCase": "Account Creation Failure - Existing Email",
+    "steps": [
+      "Go to \"Page 1 Sign Up\"",
+      "Fill in valid name, existing email (e.g., already registered), and password",
+      "Click on \"Create an account\" button"
+    ],
+    "expectedResult": "Should see an error message indicating that the email address is already taken"
+  },
+  {
+    "testCase": "Login Success - Remember Me Checked",
+    "steps": [
+      "Go to \"Page 2 Log In\"",
+      "Fill in valid email and password",
+      "Check \"Remember me\" box",
+      "Click on \"Login\" button"
+    ],
+    "expectedResult": "Should see the homepage, and the browser should remember the login credentials for future sessions"
+  },
+  {
+    "testCase": "Login Success - Remember Me Unchecked",
+    "steps": [
+      "Go to \"Page 2 Log In\"",
+      "Fill in valid email and password",
+      "Leave \"Remember me\" box unchecked",
+      "Click on \"Login\" button"
+    ],
+    "expectedResult": "Should see the homepage, but the browser should not remember the login credentials for future sessions"
+  },
+  {
+    "testCase": "Login Failure - Invalid Credentials",
+    "steps": [
+      "Go to \"Page 2 Log In\"",
+      "Fill in invalid email or password (e.g., wrong credentials)",
+      "Click on \"Login\" button"
+    ],
+    "expectedResult": "Should see an error message indicating invalid credentials"
+  },
+  {
+    "testCase": "Search Products - Relevant Results",
+    "steps": [
+      "Go to the homepage (\"Page 3 E-Commerce HomePage\")",
+      "Enter a valid keyword (e.g., \"shoes\") in the search bar",
+      "Press Enter or click on the magnifying glass icon"
+    ],
+    "expectedResult": "Should see relevant products with images, names, and prices. Results should be ranked by relevance."
+  },
+  {
+    "testCase": "Filter Products - Category Selection",
+    "steps": [
+      "Go to the homepage (\"Page 3 E-Commerce HomePage\")",
+      "Click on a category (e.g., \"Men\" or \"Women\") in the sidebar menu"
+    ],
+    "expectedResult": "Should see products relevant to the selected category with images, names, and prices. Results should be paginated for large result sets."
+  },
+  {
+    "testCase": "No Search Results - Invalid Keyword",
+    "steps": [
+      "Go to the homepage (\"Page 3 E-Commerce HomePage\")",
+      "Enter an invalid keyword (e.g., \"asdfghjkl\") in the search bar",
+      "Press Enter or click on the magnifying glass icon"
+    ],
+    "expectedResult": "Should see a \"no results\" message"
+  },
+  {
+    "testCase": "Add Product to Cart - Success",
+    "steps": [
+      "Go to the homepage (\"Page 3 E-Commerce HomePage\")",
+      "Find and select a product with available inventory",
+      "Click on \"Add to Cart\""
+    ],
+    "expectedResult": "Should see a confirmation message, updated cart summary (e.g., number of items in the cart), and the product added to the cart page (\"Page 5 Cart\")"
+  },
+  {
+    "testCase": "Add Product to Cart - Out of Stock",
+    "steps": [
+      "Go to the homepage (\"Page 3 E-Commerce HomePage\")",
+      "Find and select a product with out-of-stock inventory",
+      "Click on \"Add to Cart\""
+    ],
+    "expectedResult": "Should see an error message indicating that the product is out of stock"
+  },
+  {
+    "testCase": "Add Product to Wishlist - Success",
+    "steps": [
+      "Go to the homepage (\"Page 3 E-Commerce HomePage\")",
+      "Find and select a product with available inventory",
+      "Click on \"Add to Wishlist\""
+    ],
+    "expectedResult": "Should see a confirmation message, and the product should be added to the wishlist page (\"Page 4 Wishlist\")"
+  },
+  {
+    "testCase": "Remove Product from Wishlist - Success",
+    "steps": [
+      "Go to the wishlist page (\"Page 4 Wishlist\")",
+      "Find and select a product in the wishlist",
+      "Click on \"Remove\" or use the trash icon next to the product"
+    ],
+    "expectedResult": "Should see a confirmation message, and the selected product should be removed from the wishlist"
+  },
+  {
+    "testCase": "Initiate Checkout - Empty Cart",
+    "steps": [
+      "Go to the homepage (\"Page 3 E-Commerce HomePage\")",
+      "Have an empty cart (no items added)",
+      "Click on \"Proceed to Checkout\""
+    ],
+    "expectedResult": "Should see an error message indicating that the cart is empty"
+  },
+  {
+    "testCase": "Initiate Checkout - Guest User",
+    "steps": [
+      "Add products to the cart and proceed to checkout (\"Page 6 CheckOut\")",
+      "Leave the email field blank (guest user)"
+    ],
+    "expectedResult": "Should be prompted to login/register as a guest user"
+  },
+  {
+    "testCase": "Complete Checkout - Success",
+    "steps": [
+      "Go through the entire checkout process with valid billing, shipping, and payment information",
+      "Click on \"Place Your Order\""
+    ],
+    "expectedResult": "Should see a confirmation message, order number, receipt details, and a successful transaction record"
+  },
+  {
+    "testCase": "Flash Sale - Active Promotion",
+    "steps": [
+      "Go to the homepage (\"Page 3 E-Commerce HomePage\")",
+      "Look for featured products with countdown timers and discounted pricing"
+    ],
+    "expectedResult": "Should see active flash sale promotions with discounted prices and countdown timers"
+  },
+  {
+    "testCase": "Flash Sale - Expired Promotion",
+    "steps": [
+      "Go to the homepage (\"Page 3 E-Commerce HomePage\")",
+      "Look for featured products that have an expired promotion (e.g., countdown timer finished)"
+    ],
+    "expectedResult": "Should not see any active flash sale promotions, or should see a message indicating that the promotion has ended"
+  }
+]

@@ -1,0 +1,60 @@
+Test Case: Create New User*
+Steps:
+Expected Result: User is logged in and redirected to the homepage
+
+Test Case: User Login*
+Steps:
+Expected Result: User is logged in and redirected to the homepage
+
+Test Case: Update Profile Information*
+Steps:
+Expected Result: User's profile information is updated successfully
+
+Test Case: Add New Address*
+Steps:
+Expected Result: New address is added successfully and displayed under "My Addresses"
+
+Test Case: Search Products by Keyword*
+Steps:
+Expected Result: A list of products matching the keyword is displayed
+
+Test Case: Filter Products by Category*
+Steps:
+Expected Result: A list of products belonging to the selected category is displayed
+
+Test Case: Apply Filters*
+Steps:
+Expected Result: A list of products matching the applied filters is displayed
+
+Test Case: Add Product to Cart*
+Steps:
+Expected Result: The selected product is added to the cart and displayed in the cart summary
+
+Test Case: Update Quantity in Cart*
+Steps:
+Expected Result: The cart is updated with the new quantity, and the total price reflects the change
+
+Test Case: Remove Item from Cart*
+Steps:
+Expected Result: The selected item is removed from the cart successfully
+
+Test Case: Add Product to Wishlist*
+Steps:
+Expected Result: The selected product is added to the wishlist and displayed in the wishlist summary
+
+Test Case: Remove Product from Wishlist*
+Steps:
+Expected Result: The selected item is removed from the wishlist successfully
+
+Test Case: Initiate Checkout*
+Steps:
+Expected Result: User is redirected to the checkout page ("Page 6 CheckOut")
+
+Test Case: Complete Checkout with Valid Payment Details*
+Steps:
+Expected Result: The order is placed successfully, and an order confirmation message is displayed
+
+Test Case: Apply Promo Code*
+Steps:
+Expected Result: The discount is applied successfully, and the total price is updated
+
